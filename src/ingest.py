@@ -26,7 +26,7 @@ for _, row in df.iterrows():
     documents.append(doc)
 
 # 3. Set up ChromaDB (it will save to a folder ./chroma_db)
-chroma_client = chromadb.PersistentClient(path="./chroma_db")
+chroma_client = chromadb.PersistentClient(path="/path/chroma_db")
 chroma_collection = chroma_client.get_or_create_collection("ticket_knowledge")
 
 # 4. Set up Embed Model
